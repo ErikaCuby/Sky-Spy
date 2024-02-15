@@ -7,17 +7,38 @@ body {
 }
 .base {
   margin: 40px auto;
-  padding: 10px;
+  padding: 5px;
   border-radius: 20px;
   max-width: 600px;
   box-shadow: -30px 0 60px 0 rgba(3, 2, 6, 0.387),
-    inset -20px 2px 20px rgba(247, 248, 250, 0.858);
+    inset -30px 0px 20px rgba(247, 248, 250, 0.632);
 }
 .forecast {
   background-color: #d5e2e9;
   padding-bottom: 20px;
   border-radius: 20px;
-  box-shadow: -10px 0 20px 0 rgba(3, 2, 6, 0.387);
+  box-shadow: -10px 5 20px 15 rgba(3, 2, 6, 0.387);
+}
+.search-input {
+  background-color: #d5e2e9;
+  border: none;
+  font-size: 16px;
+  padding: 15px;
+  width: 80%;
+  border-radius: 20px;
+}
+.search-button {
+  margin-left: 5px;
+  font-size: 16px;
+  background-color: #0926497e;
+  color: #d5e2e9;
+  border: none;
+  padding: 16px;
+  border-radius: 20px;
+}
+main {
+  display: flex;
+  justify-content: space-between;
 }
 .display {
   background-color: #254162;
@@ -35,4 +56,10 @@ footer a {
   text-decoration: none;
   color: #254162a4;
   font-weight: bold;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0;
 }
