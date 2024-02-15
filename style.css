@@ -28,7 +28,7 @@ body {
   box-shadow: 0 10px 10px rgba(65, 50, 100, 0.592);
 }
 header {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .search-input {
   background-color: #d5e2e9;
@@ -62,17 +62,17 @@ main {
   margin: 5px;
 }
 .current-temperature-value {
-    font-size: 40px;
-    margin: 5px;
-    font-weight: lighter;
+  font-size: 40px;
+  margin: 5px;
+  font-weight: lighter;
 }
 .current-temperature-unit {
-    font-size: 15px;
-    position: relative;
-    top: -17px;
+  font-size: 15px;
+  position: relative;
+  top: -17px;
 }
 .current-weather-icon {
-    font-size: 100px;
+  font-size: 100px;
 }
 
 .current-details {
@@ -97,6 +97,6 @@ footer {
 }
 footer a {
   text-decoration: none;
-  color: #254162a4;
+  color: #39a047;
   font-weight: bold;
 }
