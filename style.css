@@ -83,6 +83,8 @@ main {
 .material-symbols-outlined {
   font-size: 15px;
   font-weight: 300;
+  position: relative;
+  bottom: -1.3px;
 }
 ul {
   list-style: none;
