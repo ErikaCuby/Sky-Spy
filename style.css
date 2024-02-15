@@ -1,8 +1,38 @@
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
-
+body {
+  background-color: #254162;
+  font-family: sans-serif;
+}
+.base {
+  margin: 40px auto;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 600px;
+  box-shadow: -30px 0 60px 0 rgba(3, 2, 6, 0.387),
+    inset -20px 2px 20px rgba(247, 248, 250, 0.858);
+}
+.forecast {
+  background-color: #d5e2e9;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: -10px 0 20px 0 rgba(3, 2, 6, 0.387);
+}
+.display {
+  background-color: #254162;
+  color: #d5e2e9;
+  padding: 30px;
+  border-radius: 20px 20px 0px 80px;
+  box-shadow: 0 10px 10px rgba(65, 50, 100, 0.592);
+}
+footer {
+  text-align: center;
+  color: #25416298;
+  font-size: 15px;
+}
+footer a {
+  text-decoration: none;
+  color: #254162a4;
+  font-weight: bold;
+}
