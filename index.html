@@ -9,9 +9,12 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Sky Spy</title>
   </head>
@@ -35,7 +38,7 @@
             <div class="current-weather">
               <p class="current-city">
                 <span class="material-symbols-outlined"> location_on </span
-                >Bratislava
+                ><span id="current-city">Bratislava</span>
               </p>
               <p class="current-condition">Sunny</p>
               <p class="current-temperature-value">
@@ -48,18 +51,21 @@
             <ul>
               <li class="current-day">
                 <span class="material-symbols-outlined"> calendar_today </span
-                > Wednesday
+                ><span id="current-day"> Wednesday</span>
               </li>
               <li class="current-time">
-                <span class="material-symbols-outlined"> schedule </span> 02:56
+                <span class="material-symbols-outlined"> schedule </span
+                ><span id="current-time"> 02:56</span>
               </li>
               <li class="current-humidity">
                 <span class="material-symbols-outlined">
-                  humidity_percentage </span
-                > 73%
+                  humidity_percentage
+                </span>
+                <span id="current-humidity"> 73%</span>
               </li>
               <li class="current-wind">
-                <span class="material-symbols-outlined"> air </span> 7.2km/h
+                <span class="material-symbols-outlined"> air </span
+                ><span id="current-wind"> 7.2km/h</span>
               </li>
             </ul>
           </div>
@@ -77,5 +83,6 @@
         </footer>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
