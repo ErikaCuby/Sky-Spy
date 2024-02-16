@@ -43,6 +43,11 @@ header {
   border: none;
   padding: 16px;
   border-radius: 20px;
+  transition: all 150ms ease-in-out;
+}
+.search-button:hover {
+  background-color: #092649c5;
+  cursor: pointer;
 }
 main {
   display: flex;
