@@ -73,8 +73,9 @@ main {
   position: relative;
   top: -17px;
 }
-.current-weather-icon {
-  font-size: 100px;
+
+.weather-app-icon {
+  width: 160px;
 }
 
 .current-details {
