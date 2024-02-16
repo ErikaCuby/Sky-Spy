@@ -3,8 +3,47 @@ function displayWeather(response) {
   let temperatureElement = document.querySelector("#current-temperature-value");
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
-  cityElement.innerHTML = response.data.city;
+  let descriptionElement = document.querySelector("#current-condition");
+  let humidityElement = document.querySelector("#current-humidity");
+  let windElement = document.querySelector("#current-wind");
+  let timeElement = document.querySelector("#current-time");
+  let dayElement = document.querySelector("#current-day");
+  let date = new Date(response.data.time * 1000);
+
+  cityElement.innerHTML = `${response.data.city}, ${response.data.country}`;
   temperatureElement.innerHTML = temperature;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  timeElement.innerHTML = formatTime(date);
+  dayElement.innerHTML = formatDate(date);
+}
+
+function formatTime(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return day;
 }
 
 function searchCity(city) {
