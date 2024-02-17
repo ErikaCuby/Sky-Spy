@@ -31,7 +31,7 @@ function formatTime(date) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  return `${hours}:${minutes}`;
+  return ` ${hours}:${minutes}`;
 }
 
 function formatDate(date) {
