@@ -4,7 +4,7 @@ body {
   letter-spacing: 1.2px;
 }
 .base {
-  margin: 90px auto;
+  margin: 23px auto;
   padding: 5px;
   border-radius: 20px;
   max-width: 600px;
@@ -106,4 +106,23 @@ footer a {
   text-decoration: none;
   color: #39a047;
   font-weight: 900;
+}
+.weather-forecast-row {
+  padding: 0 30px 20px 0;
+  color: #254162d2;
+  font-size: 17px;
+   text-align: center;
+   border-bottom: 1px solid #2541621a;
+}
+.weather-forecast-icon{
+  font-size: 25px;
+}
+.weather-forecast-temperatures {
+  font-size: 14px;
+}
+.weather-forecast-temperature-max {
+  font-weight: bolder;
+}
+.weather-forecast-temperature-min {
+  color: #39a047;
 }

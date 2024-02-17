@@ -15,7 +15,7 @@ function displayWeather(response) {
   temperatureElement.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  windElement.innerHTML = ` ${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatTime(date);
   dayElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
