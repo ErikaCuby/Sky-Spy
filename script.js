@@ -60,16 +60,10 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("submit", handleSearchSubmit);
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
 
-searchCity("Oslo");
-
-//citat vsetko zdola nahor, lebo tak funkcie na seba nadvazuju a vzajomne sa vyvolavaju (separation of concerns-nech funkcia robi len jednu vec a nech ju robi dobre)
-
-let forecast = document.querySelector("#forecast");
-
-forecast.innerHTML = `
+  forecast.innerHTML = `
  <div class="weather-forecast-single-day">
   <div class="weather-forecast-date">Wed</div>
   <div class="weather-forecast-icon">🌤️</div>
@@ -79,3 +73,14 @@ forecast.innerHTML = `
   </div>
  </div>
 `;
+}
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Oslo");
+displayForecast();
+
+//citat vsetko zdola nahor, lebo tak funkcie na seba nadvazuju a vzajomne sa vyvolavaju (separation of concerns-nech funkcia robi len jednu vec a nech ju robi dobre)
+
+
