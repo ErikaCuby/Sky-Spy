@@ -19,6 +19,8 @@ function displayWeather(response) {
   timeElement.innerHTML = formatTime(date);
   dayElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatTime(date) {
@@ -60,7 +62,15 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "b5913f071fao57fb23b245a065fb8tac";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+console.log(response.data);
+
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
@@ -87,6 +97,7 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Oslo");
-displayForecast();
+
+
 
 //citat vsetko zdola nahor, lebo tak funkcie na seba nadvazuju a vzajomne sa vyvolavaju (separation of concerns-nech funkcia robi len jednu vec a nech ju robi dobre)
