@@ -119,10 +119,12 @@ footer a {
 }
 .weather-forecast-temperatures {
   font-size: 14px;
+  margin-top: 5px;
 }
 .weather-forecast-temperature-max {
   font-weight: bolder;
 }
 .weather-forecast-temperature-min {
   color: #39a047;
+  opacity: 0.7;
 }
