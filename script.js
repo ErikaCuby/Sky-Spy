@@ -61,11 +61,15 @@ function handleSearchSubmit(event) {
 }
 
 function displayForecast() {
-  let forecast = document.querySelector("#forecast");
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
 
-  forecast.innerHTML = `
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
  <div class="weather-forecast-single-day">
-  <div class="weather-forecast-date">Wed</div>
+  <div class="weather-forecast-date">${day}</div>
   <div class="weather-forecast-icon">🌤️</div>
   <div class="weather-forecast-temperatures">
   <span class="weather-forecast-temperature-max">15º</span>
@@ -73,6 +77,10 @@ function displayForecast() {
   </div>
  </div>
 `;
+  });
+  let forecast = document.querySelector("#forecast");
+
+  forecast.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form");
@@ -82,5 +90,3 @@ searchCity("Oslo");
 displayForecast();
 
 //citat vsetko zdola nahor, lebo tak funkcie na seba nadvazuju a vzajomne sa vyvolavaju (separation of concerns-nech funkcia robi len jednu vec a nech ju robi dobre)
-
-
